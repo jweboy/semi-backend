@@ -10,10 +10,11 @@ async function connectRedis() {
   let redisClient = createClient({
     password: REDIS_PASSWORD,
     database: 1,
-    ...(isDev && { url: REDIS_URL }),
-    ...(isProd && {
-      socket: { host: REDIS_CONTAINER_NAME },
-    }),
+    url: REDIS_URL,
+    // ...(isDev && { url: REDIS_URL }),
+    // ...(isProd && {
+    //   socket: { host: REDIS_CONTAINER_NAME },
+    // }),
   });
   await redisClient.connect();
   return redisClient;
