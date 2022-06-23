@@ -2,12 +2,9 @@ import { Button, Table } from '@douyinfe/semi-ui'
 import Link from 'next/link'
 import React from 'react'
 import useSWR from 'swr'
-import { columns } from './columns'
-// import StatusBar from './components/StatusBar'
-import { useRouter } from 'next/router'
 import Signin from '../../../../src/entity/Signin'
-
-const fetcher = (...args) => fetch(...args).then((res) => res.json()).then(({ data }) => data)
+import { columns } from '../../../../lib/pages/juejin/columns'
+import { fetcher } from '../../../../utils/fetch'
 
 const SigninStatistics = React.memo(
   () => {

@@ -2,7 +2,7 @@ import { Layout } from '@douyinfe/semi-ui'
 import { NextPage } from 'next'
 import * as React from 'react'
 
-const Content: NextPage = (props) => {
+const Content = (props) => {
   return (
     <Layout.Content
       style={{
