@@ -1,0 +1,49 @@
+{
+   "name": "next-app-ts",
+   "version": "0.1.0",
+   "private": true,
+   "scripts": {
+      "dev": "concurrently \"next dev\" \"pnpm compile:watch\"",
+      "compile:watch": "babel -w ./src --out-dir dist --extensions .ts",
+      "build": "next build",
+      "start": "next start",
+      "lint": "next lint",
+      "m:create": "typeorm migration:create",
+      "m:run": "typeorm migration:run",
+      "m:revert": "typeorm migration:revert",
+      "e:create": "typeorm entity:create"
+   },
+   "dependencies": {
+      "@babel/cli": "^7.17.10",
+      "@babel/core": "^7.18.5",
+      "@douyinfe/semi-icons": "^2.11.2",
+      "@douyinfe/semi-next": "^2.11.2",
+      "@douyinfe/semi-ui": "^2.11.1",
+      "@koa/router": "^10.1.1",
+      "dayjs": "^1.11.3",
+      "dotenv": "^16.0.1",
+      "koa": "^2.13.4",
+      "mysql": "^2.14.1",
+      "next": "12.1.6",
+      "react": "18.1.0",
+      "react-dom": "18.1.0",
+      "redis": "^4.1.0",
+      "reflect-metadata": "^0.1.13",
+      "swr": "^1.3.0",
+      "typeorm": "0.3.6",
+      "undici": "^5.4.0"
+   },
+   "devDependencies": {
+      "@babel/plugin-proposal-decorators": "^7.18.2",
+      "@types/koa": "^2.13.4",
+      "@types/koa__router": "^8.0.11",
+      "@types/node": "^16.11.10",
+      "@types/react": "18.0.10",
+      "@types/react-dom": "18.0.5",
+      "concurrently": "^7.2.2",
+      "eslint": "8.16.0",
+      "eslint-config-next": "12.1.6",
+      "ts-node": "10.7.0",
+      "typescript": "4.5.2"
+   }
+}
