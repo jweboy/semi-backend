@@ -6,8 +6,6 @@ const { REDIS_PASSWORD, REDIS_URL, REDIS_CONTAINER_NAME, NODE_ENV } =
 const isDev = NODE_ENV === "development";
 const isProd = NODE_ENV === "production";
 
-console.log(REDIS_URL);
-
 async function connectRedis() {
   let redisClient = createClient({
     password: REDIS_PASSWORD,
